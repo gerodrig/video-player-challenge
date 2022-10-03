@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Video Player</title>
+  </head>
+  <body>
+    <!-- 700*700 ring -->
+    <div class="ring-top">
+      <div class="ring__inner"></div>
+    </div>
+    <div class="wrapper">
+      <div class="player">
+        <video
+          src="./assets/videos/Matthias-Steiner.mp4"
+          poster="/assets/images/maxresdefault.jpg"
+          id="video"
+        ></video>
+        <div class="player-overlay">
+          <h2 class="player-title">Programming Music</h2>
+          <div class="player-actions">
+            <button
+              class="button"
+              id="backward"
+              aria-label="Backward 10 seconds"
+              title="Backward 10 seconds"
+            ></button>
+            <button
+              class="button"
+              id="play"
+              aria-label="Play"
+              title="Play"
+            ></button>
+            <button
+              class="button"
+              id="pause"
+              hidden
+              aria-label="Pause"
+              title="Pause"
+            ></button>
+            <button
+              class="button"
+              id="forward"
+              aria-label="Forward 10 seconds"
+              title="Forward 10 seconds"
+            ></button>
+          </div>
+          <div class="player-progress">
+            <input id="progress" type="range" min="0" value="0" step="1" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ring-bottom">
+      <div class="ring__inner"></div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

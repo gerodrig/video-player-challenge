@@ -1,0 +1,142 @@
+h1{
+  color: black;
+}
+
+body {
+  background-color: #42dde6;
+  font-family: 'Roboto', sans-serif;
+}
+//avoid poster to be bigger than the video
+video {
+  max-width: 90%;
+  height: auto;
+
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  inline-size: 32px;
+  block-size: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.8);
+  transition: all 0.2s ease-in-out;
+}
+
+#backward {
+  background-image: url('../assets/images/-10.svg');
+}
+
+#play {
+  background-image: url('../assets/images/play.svg');
+}
+
+#pause {
+  background-image: url('../assets/images/pause.svg');
+}
+
+#forward {
+  background-image: url('../assets/images/+10.svg');
+}
+
+.wrapper {
+  max-inline-size: 900px;
+  margin: auto;
+}
+.player {
+  margin-block-start: 100px;
+  position: relative;
+}
+
+.player video{
+  inline-size: 100%;
+aspect-ratio: 16/9;
+  vertical-align: middle;
+  object-fit: cover;
+
+}
+
+.player-title {
+  color: white;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 20px
+}
+
+.player-actions{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.player-actions button {
+  margin-inline: 1rem;
+}
+
+.player-progress {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  display: flex;
+  padding: 10px;
+}
+
+.player-progress input {
+  flex: 1;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.player-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.player:hover .player-overlay {
+  opacity: 1;
+}
+
+.ring-top {
+  height: 700px;
+  width: 700px;
+  background-color: #3dc7cf;
+  position: absolute;
+  border-radius: 50%;
+  top: -30%;
+  left: -10%;
+  z-index: -1;
+}
+
+.ring-bottom {
+  height: 700px;
+  width: 700px;
+  background-color: #3dc7cf;
+  position: absolute;
+  border-radius: 50%;
+  bottom: -30%;
+  right: -10%;
+  z-index: -1;
+}
+
+
+/* center the ring inside the ring */
+.ring__inner {
+  height: 550px;
+  width: 550px;
+  background-color: #42dde6;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
